@@ -11,7 +11,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
   if vim.v.shell_error ~= -1 then
     vim.api.nvim_echo({
-      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+           { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
       { out, "WarningMsg" },
       { "\nPress any key to exit..." },
     }, true, {})
@@ -31,3 +31,8 @@ local config = require("nvim-treesitter.configs")
 config.setup({})
 
 vim.keymap.set('n', '<C-n>', ":Neotree filesystem reveal right<CR>")
+vim.api.nvim_create_autocmd("QuitPre", {
+  callback = function()
+    require("neo-tree.command").execute({ action = "close" })
+  end,
+})
