@@ -81,6 +81,5 @@ I use **lazy.nvim** as the plugin manager.
 ## 🚀 How to use
 
 ```bash
-git clone https://github.com/your-username/your-nvim-config.git ~/.config/nvim
-nvim
+git clone https://github.com/naimdotcom/neovim-setup.git
 ```
