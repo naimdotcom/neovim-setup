@@ -1,0 +1,23 @@
+# Neovim swap/backup/undo files
+*.swp
+*.swo
+*.bak
+*.tmp
+*.undo
+*.backup
+
+# Neovim local data & cache directories
+.cache/
+.local/
+session/
+
+# Lazy.nvim lock file (optional — ignore if you don’t want to pin exact plugin versions)
+lazy-lock.json
+
+# Logs or temp files
+log/
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
