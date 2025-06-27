@@ -3,20 +3,20 @@ local M = {}
 
 -- Default configuration
 local default_config = {
-  max_diff_lines = 100,
+  max_diff_lines = 200,
   include_file_stats = true,
   auto_copy_to_clipboard = true,
   prompt_template = [[
 Based on the following Git diff, generate a short, clear, and professional Git commit message using the conventional commits format (e.g., feat, fix, refactor, docs, style, chore).
 Requirements:
-1. Keep the main message under 50 characters.
+1. Keep the main message under 200 characters.
 2. Only include an optional body if the change is complex.
 3. Avoid unnecessary details — focus on what changed and why.
 4. Format: type(scope): short description
 5. Output the result as: git commit -m "type(scope): description"
 Git Diff:
 %s
-Example Output:
+give me output in this format: Example Output:
 git commit -m "generated commit message"
 ]],
   file_stats_template = "Files changed: %d, Insertions: %d, Deletions: %d"
