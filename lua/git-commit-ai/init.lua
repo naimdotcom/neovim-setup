@@ -7,25 +7,17 @@ local default_config = {
   include_file_stats = true,
   auto_copy_to_clipboard = true,
   prompt_template = [[
-Based on the following git diff, generate a concise and descriptive commit message following conventional commits format:
-
+Based on the following Git diff, generate a short, clear, and professional Git commit message using the conventional commits format (e.g., feat, fix, refactor, docs, style, chore).
+Requirements:
+1. Keep the main message under 50 characters.
+2. Only include an optional body if the change is complex.
+3. Avoid unnecessary details — focus on what changed and why.
+4. Format: type(scope): short description
+5. Output the result as: git commit -m "type(scope): description"
 Git Diff:
-```
 %s
-```
-
-%s
-
-Please provide:
-1. A main commit message (50 characters or less)
-2. Optional body (if needed for complex changes)
-3. Follow conventional commits: type(scope): description
-
-Examples:
-- feat: add user authentication system
-- fix(api): resolve null pointer exception in user service
-- docs: update installation guide
-- refactor: simplify database connection logic
+Example Output:
+git commit -m "generated commit message"
 ]],
   file_stats_template = "Files changed: %d, Insertions: %d, Deletions: %d"
 }
