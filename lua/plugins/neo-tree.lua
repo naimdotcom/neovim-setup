@@ -8,20 +8,22 @@ return {
    "MunifTanjim/nui.nvim",
   },
   lazy = false,
-  opts = {},
-  --  config = function()
-  --   require("neo-tree").setup({
-  --    window = {
-  --     position = "right"
-  --    }
-  --   })
-  --   vim.api.nvim_create_autocmd("VimEnter", {
-  --    callback = function()
-  --     if vim.fn.argv(0) == "" then
-  --      vim.cmd("Neotree show")
-  --     end
-  --    end,
-  --   })
-  --  end
+  opts = {
+  },
+  config = function()
+   require("neo-tree").setup({
+    window = {
+     position = "right",
+     width = 26
+    }
+    --   })
+    --   vim.api.nvim_create_autocmd("VimEnter", {
+    --    callback = function()
+    --     if vim.fn.argv(0) == "" then
+    --      vim.cmd("Neotree show")
+    --     end
+    --    end,
+   })
+  end
  },
 }
