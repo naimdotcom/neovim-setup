@@ -6,60 +6,60 @@ I use **lazy.nvim** as the plugin manager.
 
 ---
 
-## ✨ Features
+## Features
 
-✅ **LSP + Mason** — Easy language server management for:
+**LSP + Mason** — Easy language server management for:
 
 - JavaScript / TypeScript
 - Python
 - C / C++
 - Lua
 
-✅ **Auto-completion**
+**Auto-completion**
 
 - `nvim-cmp` for completion
 - `LuaSnip` for snippets
 - Friendly community snippets
 
-✅ **File explorer**
+**File explorer**
 
 - `neo-tree.nvim` for side file navigation
 
-✅ **Buffer management**
+**Buffer management**
 
 - `bufferline.nvim` with clean buffer tabs
 
-✅ **Status line**
+**Status line**
 
 - `lualine.nvim` with icon support via `nvim-web-devicons`
 
-✅ **Fuzzy finder**
+**Fuzzy finder**
 
 - `telescope.nvim` with `ui-select` extension
 
-✅ **Formatting / linting**
+**Formatting / linting**
 
 - `none-ls.nvim` (formerly null-ls) for formatters and linters
 
-✅ **Syntax highlighting**
+**Syntax highlighting**
 
 - `nvim-treesitter` for advanced syntax parsing
 
-✅ **Auto-pairs**
+**Auto-pairs**
 
 - `nvim-autopairs` for automatic bracket/quote pairs
 
-✅ **Dashboard**
+**Dashboard**
 
 - `alpha-nvim` for a nice startup screen
 
-✅ **Theme**
+**Theme**
 
 - `moonfly` and `windsurf.vim` (custom theme options)
 
 ---
 
-## 🛠️ Key Plugins & Versions
+## Key Plugins & Versions
 
 | Plugin          | Branch | Commit                                   |
 | --------------- | ------ | ---------------------------------------- |
@@ -74,12 +74,53 @@ I use **lazy.nvim** as the plugin manager.
 | telescope.nvim  | master | a0bbec21143c7bc5f8bb02e0005fa0b982edc026 |
 | nvim-treesitter | master | 42fc28ba918343ebfd5565147a42a26580579482 |
 
-✅ **And more... (see `lazy-lock.json`)**
+**And more... (see `lazy-lock.json`)**
 
 ---
 
-## 🚀 How to use
+## How to Use
 
 ```bash
 git clone https://github.com/naimdotcom/neovim-setup.git
 ```
+
+## Keyboard Shortcuts
+
+Below are all custom key mappings configured in this setup.
+
+| Key          | Mode            | Description                    |
+| ------------ | --------------- | ------------------------------ |
+| `<Space>`    | —               | Leader key                     |
+| `<S-l>`      | Normal          | Next buffer                    |
+| `<S-h>`      | Normal          | Previous buffer                |
+| `<C-p>`      | Normal          | Find files (Telescope)         |
+| `<leader>fg` | Normal          | Live grep (Telescope)          |
+| `K`          | Normal          | Show hover documentation (LSP) |
+| `gd`         | Normal          | Go to definition (LSP)         |
+| `gr`         | Normal          | Show references (LSP)          |
+| `<leader>rn` | Normal          | Rename symbol (LSP)            |
+| `<leader>ca` | Normal / Visual | Code actions (LSP)             |
+| `<leader>gf` | Normal          | Format file (None-LS)          |
+| `<C-n>`      | Normal          | Toggle Neo-tree file explorer  |
+| `<Tab>`      | Insert          | Next completion item           |
+| `<S-Tab>`    | Insert          | Previous completion item       |
+| `<CR>`       | Insert          | Confirm completion             |
+| `<C-Space>`  | Insert          | Trigger completion manually    |
+| `<C-b>`      | Insert          | Scroll docs up                 |
+| `<C-f>`      | Insert          | Scroll docs down               |
+| `<C-e>`      | Insert          | Abort completion               |
+| `<C-g>`      | Insert          | Accept Codeium suggestion      |
+| `<C-;>`      | Insert          | Next Codeium suggestion        |
+| `<C-,>`      | Insert          | Previous Codeium suggestion    |
+| `<C-x>`      | Insert          | Clear Codeium suggestion       |
+
+
+## Notes
+
+Code formatting runs automatically on save.
+
+Neo-tree closes automatically when quitting Neovim.
+
+You can customize shortcuts easily under lua/plugins/*.lua.
+
+Default Telescope bindings (like / search, recent files, etc.) are still available.
